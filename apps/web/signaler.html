@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#301416" />
+    <meta name="description" content="Signalez un problème dans votre quartier de Terra Nova à l'aide du formulaire citoyen." />
+    <title>Signaler un problème — Terra Nova</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Terra Nova, accueil"><span class="brand-mark" aria-hidden="true"><span></span></span><span class="brand-name">TERRA <span>NOVA</span></span></a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a class="nav-link" href="./index.html">Accueil</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link nav-link--active" href="./signaler.html" aria-current="page">Signaler</a>
+        <a class="nav-link" href="./actualites.html">Actualités</a>
+        <a class="nav-link" href="./profil.html">Mon espace</a>
+      </nav>
+      <a class="header-action" href="./profil.html"><span>Mon espace</span><span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="contenu" class="page-wrap inner-page">
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="page-kicker"><span class="status-dot"></span> ENSEMBLE, PRENONS SOIN DE NOTRE CITÉ</p>
+        <h1 id="page-title">Un problème ?<br /><span>Faisons-le remonter.</span></h1>
+        <p>Décrivez ce que vous avez constaté. Les informations transmises aideront les équipes municipales à orienter votre demande.</p>
+      </section>
+
+      <section class="content-section" aria-label="Formulaire de signalement">
+        <div class="form-layout">
+          <form class="report-form" action="mailto:signalements@terranova.example" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="nom">Votre nom</label>
+              <input id="nom" name="nom" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Adresse e-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="quartier">Votre quartier</label>
+              <select id="quartier" name="quartier" required>
+                <option value="" selected disabled>Choisir un secteur</option>
+                <option>Secteur 01 — Les Origines</option>
+                <option>Secteur 03 — La Canopée</option>
+                <option>Secteur 07 — Les Jardins</option>
+                <option>Secteur 12 — Horizon</option>
+                <option>Autre secteur</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="categorie">Type de problème</label>
+              <select id="categorie" name="categorie" required>
+                <option value="" selected disabled>Choisir une catégorie</option>
+                <option>Voirie et espaces partagés</option>
+                <option>Eau et ressources</option>
+                <option>Éclairage et énergie</option>
+                <option>Propreté et déchets</option>
+                <option>Autre demande</option>
+              </select>
+            </div>
+            <fieldset class="field field--full choice-group">
+              <legend class="field-label">Niveau de priorité</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="priorite" value="normale" checked /> Normale</label>
+                <label class="choice"><input type="radio" name="priorite" value="importante" /> Importante</label>
+                <label class="choice"><input type="radio" name="priorite" value="urgente" /> Urgente</label>
+              </div>
+            </fieldset>
+            <div class="field field--full">
+              <label for="lieu">Emplacement précis</label>
+              <input id="lieu" name="lieu" placeholder="Ex. allée des Érables, près du dôme 4" required />
+            </div>
+            <div class="field field--full">
+              <label for="description">Description du problème</label>
+              <textarea id="description" name="description" minlength="20" placeholder="Décrivez ce que vous avez observé et depuis quand..." required></textarea>
+              <span class="field-help">Merci d’indiquer suffisamment de détails pour aider les équipes à intervenir.</span>
+            </div>
+            <label class="choice field--full"><input type="checkbox" name="confirmation" required /> Je confirme l’exactitude des informations transmises.</label>
+            <button class="button button--primary form-submit" type="submit">Préparer mon signalement <span aria-hidden="true">↗</span></button>
+            <p class="form-note field--full">Prototype HTML : le navigateur prépare un e-mail vers une adresse de démonstration. Le traitement réel des signalements nécessite de configurer l’adresse de réception de la mairie.</p>
+          </form>
+
+          <aside class="form-aside">
+            <h2>Avant de commencer</h2>
+            <p>Un signalement précis permet aux équipes de comprendre plus rapidement la situation.</p>
+            <ul>
+              <li>Indiquez le secteur et un repère proche.</li>
+              <li>Décrivez les faits et leur ancienneté.</li>
+              <li>Ne partagez pas d’informations sensibles.</li>
+            </ul>
+            <div class="notice-panel"><strong>Danger immédiat ?</strong> Ce formulaire n’est pas un service d’urgence. Contactez directement l’équipe d’intervention.</div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-wrap">
+      <a class="brand brand--footer" href="./index.html" aria-label="Terra Nova, accueil"><span class="brand-mark" aria-hidden="true"><span></span></span><span class="brand-name">TERRA <span>NOVA</span></span></a>
+      <p>Un monde à partager. <span>© 2049 Terra Nova</span></p>
+      <a href="./services.html" class="back-top">Tous les services <span aria-hidden="true">→</span></a>
+    </footer>
+  </body>
+</html>
