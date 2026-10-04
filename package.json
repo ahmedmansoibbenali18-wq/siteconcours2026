@@ -1,19 +1,13 @@
 {
-  "name": "terra-nova-web",
+  "name": "terra-nova",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "workspaces": [
+    "web"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.7"
+    "dev": "npm run dev --workspace terra-nova-web",
+    "build": "npm run build --workspace terra-nova-web",
+    "preview": "npm run preview --workspace terra-nova-web"
   }
 }
